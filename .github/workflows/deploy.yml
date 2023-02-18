@@ -1,0 +1,22 @@
+name: Deploy XLNetBot to Heroku
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Login to Heroku
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        email: "guinnessgshep@gmail.com"
+        api_key: "c3814a48-7319-4586-ab1d-a6a5bf293a48"
+    - name: Set up Heroku git remote
+      run: heroku git:remote -a xlnetbot
+    - name: Push code to Heroku
+      run: git push heroku HEAD:main
