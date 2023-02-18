@@ -23,12 +23,12 @@ jobs:
     - name: Login to Heroku
       uses: actions/heroku@v2
       with:
-        email: ${{ secrets.HEROKU_EMAIL }}
-        api_key: ${{ secrets.HEROKU_API_KEY }}
+        email: "guinnessgshep@gmail.com"
+        api_key: "c3814a48-7319-4586-ab1d-a6a5bf293a48"
     - name: Deploy to Heroku
       uses: actions/heroku@v2
       with:
-        app-name: your-heroku-app-name
+        app-name: "xlnetbot"
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         buildpacks: heroku/python
         push-github-commit: true
