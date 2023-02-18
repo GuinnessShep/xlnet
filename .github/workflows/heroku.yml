@@ -17,7 +17,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - name: Set Heroku API Key
-        run: heroku config:set API_KEY=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 --app your-heroku-app-name
+        run: heroku apps
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
