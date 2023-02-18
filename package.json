@@ -1,14 +1,22 @@
 {
-  "name": "chatbot-app",
+  "name": "xlnet-chatbot",
   "version": "1.0.0",
-  "description": "A simple chatbot app",
+  "description": "A chatbot using XLNet and Node.js",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^2.6.1"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "echo 'No build step required'"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guinnessshep/xlnet"
   }
 }
