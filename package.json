@@ -17,6 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/guinnessshep/xlnet"
-  }
+    "url": "git+https://github.com/guinnessshep/xlnet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guinnessshep/xlnet/issues"
+  },
+  "homepage": "https://github.com/guinnessshep/xlnet#readme",
+  "devDependencies": {},
+  "author": "guinness",
+  "license": "ISC"
 }
