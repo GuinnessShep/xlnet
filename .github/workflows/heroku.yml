@@ -29,6 +29,6 @@ jobs:
       uses: actions/heroku@v2
       with:
         app-name: "xlnetbot"
-        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        heroku_api_key: "c3814a48-7319-4586-ab1d-a6a5bf293a48"
         buildpacks: heroku/python
         push-github-commit: true
