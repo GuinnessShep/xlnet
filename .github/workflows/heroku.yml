@@ -29,17 +29,17 @@ jobs:
       - name: Login to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: c3814a48-7319-4586-ab1d-a6a5bf293a48
-          heroku_app_name: xlnetbot
+          heroku_api_key: "c3814a48-7319-4586-ab1d-a6a5bf293a48"
+          heroku_app_name: "xlnetbot"
 
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: c3814a48-7319-4586-ab1d-a6a5bf293a48
-          heroku_app_name: xlnetbot
-          heroku_email: guinnessgshep@gmail.com
+          heroku_api_key: "c3814a48-7319-4586-ab1d-a6a5bf293a48"
+          heroku_app_name: "xlnetbot"
+          heroku_email: "guinnessgshep@gmail.com"
           branch: main
           appdir: .
 
       - name: Run migrations
-        run: heroku run python manage.py migrate --app xlnetbot
+        run: heroku run python manage.py migrate --app "xlnetbot"
