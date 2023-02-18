@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="style.css">
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: #f0f0f0;
+	padding: 16px;
+}
+
+.chat {
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+
+.message {
+	max-width: 60%;
+	margin-bottom: 16px;
+	padding: 8px 16px;
+	border-radius: 16px;
+	background-color: white;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message.me {
+	align-self: flex-end;
+	background-color: #1e90ff;
+	color: white;
+}
+
+.message.bot {
+	align-self: flex-start;
+	background-color: white;
+	color: black;
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	margin-top: 16px;
+}
+
+input[type="text"] {
+	flex-grow: 1;
+	padding: 8px;
+	border: none;
+	background-color: white;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+	margin-left: 16px;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 16px;
+	background-color: #1e90ff;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #0070c0;
+}
