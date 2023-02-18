@@ -1,11 +1,11 @@
 name: Deploy XLNetBot to Heroku
 
-on:
+#on:
   push:
     branches:
       - main
 
-jobs:
+#jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
