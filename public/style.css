@@ -1,75 +1,79 @@
-<link rel="stylesheet" href="style.css">
+/* style.css */
 
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background-color: #f0f0f0;
-	margin: 0;
-	padding: 0;
-}
-
+/* Default style */
 .container {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	background-color: #f0f0f0;
-	padding: 16px;
+  background-color: #f0f0f0;
+  color: black;
 }
 
-.chat {
-	flex-grow: 1;
-	overflow-y: scroll;
+/* Dark mode */
+.container.dark {
+  background-color: #1a1a1a;
+  color: white;
 }
 
-.message {
-	max-width: 60%;
-	margin-bottom: 16px;
-	padding: 8px 16px;
-	border-radius: 16px;
-	background-color: white;
-	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+/* Alternate background */
+.container.alternate {
+  background-color: #e3e3e3;
 }
 
-.message.me {
-	align-self: flex-end;
-	background-color: #1e90ff;
-	color: white;
+/* Dark mode + alternate background */
+.container.dark.alternate {
+  background-color: #292929;
 }
 
-.message.bot {
-	align-self: flex-start;
-	background-color: white;
-	color: black;
-}
-
-.input {
-	display: flex;
-	align-items: center;
-	margin-top: 16px;
-}
-
+/* Input field */
 input[type="text"] {
-	flex-grow: 1;
-	padding: 8px;
-	border: none;
-	background-color: white;
-	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  padding: 8px;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
+/* Dark mode input field */
+input[type="text"].dark {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Alternate background input field */
+input[type="text"].alternate {
+  background-color: #e3e3e3;
+}
+
+/* Dark mode + alternate background input field */
+input[type="text"].dark.alternate {
+  background-color: #292929;
+}
+
+/* Send button */
 button {
-	margin-left: 16px;
-	padding: 8px 16px;
-	border: none;
-	border-radius: 16px;
-	background-color: #1e90ff;
-	color: white;
-	font-weight: bold;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+  margin-left: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 16px;
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-	background-color: #0070c0;
+/* Dark mode send button */
+button.dark {
+  background-color: #0077be;
 }
+
+/* Alternate background send button */
+button.alternate {
+  background-color: #b3b3b3;
+  color: black;
+}
+
+/* Dark mode + alternate background send button */
+button.dark.alternate {
+  background-color: #2b2b2b;
+}
+
