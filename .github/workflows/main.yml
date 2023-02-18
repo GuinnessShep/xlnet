@@ -1,0 +1,27 @@
+name: Deploy to Heroku
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - run: npm init -y
+      - run: npm install
+      - run: npm run build
+      - name: Login to Heroku container registry
+        run: echo "c3814a48-7319-4586-ab1d-a6a5bf293a48" | docker login --username=_ --password-stdin registry.heroku.com
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: "c3814a48-7319-4586-ab1d-a6a5bf293a48"
+          heroku_app_name: "xlnetbot"
+          heroku_email: "guinnessgshep@gmail.com"
+          health_check_path: "/"
